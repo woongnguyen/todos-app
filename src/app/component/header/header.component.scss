@@ -1,0 +1,17 @@
+@import "../../app.component.scss";
+
+.icon-wrapper {
+  width:40px;
+  line-height:45px;
+  font-size:40px;
+  color:#000;
+  background:#fff;
+  transition: .25s all ease-in-out;
+  cursor: pointer;
+  & :hover {
+    opacity: .6;
+  }
+}
+app-todo-input {
+  width:100%;
+}

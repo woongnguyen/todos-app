@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { TodoService } from './services/todo.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todos-app';
+
+  hasTodo$: Observable<boolean>;
+  constructor(private todoService: TodoService) { }
+
+  ngOnInit() {
+    this.todoService.fetchFromLocalStorage();
+    this.hasTodo$ = this.todoService.length$.pipe(map(length => length > 0));
+  }
 }

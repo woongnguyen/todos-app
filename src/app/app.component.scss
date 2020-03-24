@@ -1,0 +1,31 @@
+
+$main-color: #F1E0CB;
+
+// @mixin box-shadow($rgba-color) {
+//   box-shadow: 
+// }
+
+.wrapper{
+  & .title{
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding: 30px ;
+  }
+  & .intruction {
+    padding:30px;
+    color:$main-color;
+  }
+  & .content-wrapper {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
+    background: #fff;
+  }
+  & app-header {
+    height: 40px;
+    padding: 10px;
+    border-bottom: solid 1px $main-color;
+    box-shadow: 0 1px .5px grba(0,0,0,.1)
+  }
+  & .intruction{
+    color:#000
+  }
+}
