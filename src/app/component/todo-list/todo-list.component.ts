@@ -18,4 +18,16 @@ export class TodoListComponent implements OnInit {
     this.todos$ = this.todoService.Todos$;
   }
 
+  onChangeStatus(todo: Todo) {
+    this.todoService.changeTodoStatus(todo.id, todo.isCompleted);
+  }
+
+  onEditTodo(todo: Todo) {
+    this.todoService.editTodo(todo.id, todo.content);
+  }
+
+  onRemoveTodo(id: number) {
+    this.todoService.removeTodo(id);
+  }
+
 }

@@ -31,8 +31,8 @@
     & + button {
       margin-left:4px;
     }
-    .clear-filter-btn {
-      visibility: visible;
+    &.clear-filter-btn{
+      visibility: hidden;
       & .visible{
         visibility: visible;
       }

@@ -22,7 +22,6 @@ $main-color: #F1E0CB;
   & app-header {
     height: 40px;
     padding: 10px;
-    border-bottom: solid 1px $main-color;
     box-shadow: 0 1px .5px grba(0,0,0,.1)
   }
   & .intruction{
